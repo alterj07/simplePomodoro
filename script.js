@@ -1,6 +1,6 @@
 function timer(duration, display) {
     var timer = duration, minutes, seconds;
-    setInterval(function () {
+    const interval = setInterval(function () {
         minutes = parseInt(timer / 60, 10);
         seconds = parseInt(timer % 60, 10);
 
@@ -10,8 +10,8 @@ function timer(duration, display) {
         display.textContent = minutes + ":" + seconds;
 
         if (--timer < 0) {
-            timer = duration;
-            window.alert("time up");
+            timer = 0;
+            clearInterval(interval);
         }
     }, 1000);
 }
