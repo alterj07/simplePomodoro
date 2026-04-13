@@ -8,8 +8,14 @@
 
   <body>
     <div class="app">
-      <p>Test app</p>
-      <button id="testBtn">Button</button>
+      <p>Pomodorro</p>
+      <div style = "flex-direction: row">
+        <button id="testBtn" onclick="timer(5, document.querySelector('#time'))">5 Minutes</button>
+        <button id="testBtn" onclick="timer(25, document.querySelector('#time'))">25 Minutes</button>
+      </div>
+      <div>
+        <p id="time"></p>
+      </div>
     </div>
 
     <script src="script.js"></script>
